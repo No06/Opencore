@@ -23,7 +23,7 @@
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>HideAuxiliary</key>
-			<false/>
+			<true/>
 			<key>LauncherOption</key>
 			<string>Full</string>
 			<key>LauncherPath</key>
@@ -68,8 +68,6 @@
 		<array/>
 		<key>Security</key>
 		<dict>
-			<key>AllowNvramReset</key>
-			<true/>
 			<key>AllowSetDefault</key>
 			<true/>
 			<key>AllowToggleSip</key>
@@ -114,7 +112,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>npci=0x2000 alcid=1</string>
+				<string></string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -149,7 +147,9 @@
 		<array>
 			<string>OpenRuntime.efi</string>
 			<string>OpenCanopy.efi</string>
-			<string>OpenHfsPlus.efi</string>
+			<string>OpenLinuxBoot.efi</string>
+			<string>ext4_x64.efi</string>
+			<string>btrfs_x64.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -199,8 +199,13 @@
 			<key>UgaPassThrough</key>
 			<false/>
 		</dict>
-		<key>ReservedMemory</key>
-		<array/>
+		<key>Quirks</key>
+		<dict>
+			<key>ForgeUefiSupport</key>
+			<true/>
+			<key>IgnoreInvalidFlexRatio</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
